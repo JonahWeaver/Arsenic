@@ -39,7 +39,7 @@
 
 With the rise of the rogue-like genre, with the growing understanding by more casual gamers that smaller feedback loops actually have high compatibility with busier schedules and lives and more non-commital gamers, it's difficult to innovate longer form games that can keep the player engaged long term. 
 
-I discuss more about how games tackle this here: https://github.com/JonahWeaver/Arsenic/edit/main/README.md#41-how-games-tackle-long-form-gameplay
+I discuss more about how games tackle this here: https://github.com/JonahWeaver/Arsenic/blob/main/README.md#41-how-games-tackle-long-form-gameplay
 
 To circumvent this with standard gameplay designs, various difficulties will be available, and all "crossroads" the player can traverse will be available at some point. A focus on high "transferring" between elements of the gameplay loop will be employed, along with highly compartmentalized goals for the player to accomplish such that they can feel a sense of accomplishment in the smaller part of the game to carry them throughout the larger part.
 
