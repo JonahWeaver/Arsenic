@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
+  - [Here](#more_stuff)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -10,6 +11,9 @@
 
 ## Introduction
 This section introduces the project.
+
+### Here
+This is a misc section
 
 ## Features
 A list of features.
