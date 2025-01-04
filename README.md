@@ -46,94 +46,193 @@ To circumvent this with standard gameplay designs, various difficulties will be 
 ### 1.1 Project Overview
 The idea behind Project Arsenic is to allow the player to innovate in and revive a dying culture in their revolution against global superpowers. 
 
-
+Magic is a scarce and powerful resource for the development of civilizations in the world of this game, and has developed a culture of fear as it develops as a weapon of war. Countries have further harnessed its capabilities for destruction to build empires, and a small continent at the epicenter of global powers is believed to hold the power to conquer the world with magic. The son of a heros, born in the underground city that holds the secrets sought by the world, learns of the power of the 13 Zodiacs born to protect the world from evil, and follows in the footsteps of his mother who died in birth to protect him as the Monster Bearer Zodiac: Ophiuchus. Aiming to unite legendary reincarnations of warriors, in grand strategy and management of colonies torn apart by war, the fate and stability of the world can only be protected by those of the Zodiac.
 
 ### 1.2 Importance of Documentation
-Highlights why comprehensive documentation is essential.
+A log of the intended interactions between mechanics is important not to lose sight of the overall goals of the project as defined in this document. Cohesion between elements of the gameplay loop is critical, along with the player being able to solidly identify sub-goals and interact with the game in an effective way to achieve those goals.
 
 ### 1.3 Technologies
-Lists the tools and technologies used in development.
+Unity will be used for this project. Early on, if it's decided that certain design decisions are better suited to Unreal for implementation, the pivot will be made.
 
 ## 2. Concept Statement
-An overview of the concept and features.
+Manipulating ancient and modern spells of Magic, rebuilding a crumbling continent, and reuniting the hearts of people of the world, you play the rising leader of the Ophiucus Zodiac. It will be under your strategy, intellect, and fervor that you will raise this continent in a revloutionary war against the power hungry tyrants that aim to devour the world.
 
 ### 2.1 Target Audience
-Details the intended audience for the project.
+Fans of strategy games like Fire Emblem, XCOM, Unicorn Overlord, and etcetera are the niche audience this game would hopefully immediately attract. The main concern is adapting the city management concept into the game. More robust supports, when intergrated correctly, have greatly benefitted all franchises, but the opposite is true for management. The closest was XCOM's simple hub location, and even then it's not really that loved compared to the rest of the game.
+
+Approaching implementation with the idea that a given mechanic can apply to every other one can make cross-implementation easier for a dynamic system. Say if we want to interpret a decision as creating rules for another decision to operate by, we can inject dependenies accordingly. This is a bit complicated for the context of a design document, if things will work this way, but it's important to think about what players think about when looking for a game and creating different ways of appealing to that.
 
 #### 2.1.1 Appealing to Target Audience
-Explains strategies to engage the primary audience.
+Engaging strategic gameplay and non-obtrusive and interesting city management and interactions are the basics for ensuring that this game appeals to its target audience. Characters should not be 2D cardboard cutouts of basic ideas that never grow or change (I'm the shy character that's crippling scared of people. Also I like tomatoes, because that's a personality trait). Writing more compelling characters is, of course, very difficult though, I suppose.
+
+City management will need to be simplified in the number of rules as much as possible. It should likely also try to synergize with the goals the target audience might internalize and hope to try to achieve when picking a game like this up. For example, my brother picks up Fire Emblem hoping to marry boys that he likes in game. He realizes he can achieve this by pairing characters up or having them next to each other in combat to build support points, which amount to support conversations to learn more about the character in an interesting (enough) conversation. City management should be able to meet broader goals than just resource accumulation; how can they benefit the player to meet personal sub-goals?
 
 #### 2.1.2 Appealing to Broader Audience
-Outlines approaches to attract a wider audience.
+
+* Snappy and intuitive menus and controls
+* Romantic/Platonic relationships with other characters
+  * Can build on this in all parts of the core gameplay loop, with each one typically able to contribute to certain facets of a relationship
+  * Maybe this can include a rivalry system where different NPCs can be annoyed in the resources invested in another? Sounds like a lot for not a lot of gain
+    * Maybe this all can be designed in a way where the intuitive "response" of someone in the world is apathy
+* Creating a "build" and then executing on a plan
+  * Allowing for customizability in an approach to accomplishing a plan is important to some players, though this might be too much and not addressing a player's desire necessarily in the context of a "loadout" in a tactics game
+    * This might often require the ability for the player to have information of their enemies in advance to prepare their "build"
+      * This should be fine. If gameplay scenarios are deterministic, this should be possible since metagaming exists. If the game isn't determistic and instead more procedurally generated, it's a great mechanic as an option for players.
+  *Maybe an overarching mechanic like "approach" or "formation" or "platoons" might help in build customization. A large part of the current idea in strategy games is the stats of a unit, including their mobility. Maybe there can be ideas of more dynamic attacks that affect positioning and forced movement, but that doesn't address the "build" idea.
+  *Allowing for character specs with reclassing options might be beneficial, like Fire Emblem Heart Seals or Second Seals. I think FE Engage does it best, where weapon affinity decides ability to reclass
+    *What to maintain:
+      *Logical soundness: Reclassing a brute into a mage class or a scrawny girl into an armored infantry class shouldn't be possible. Builds/classes should serve to enhance character identity.
+      *Meaningful bonuses to build advancement options: The player should have to choose between given options in order to advance their playstyle. This involves having build/class identity that synergizes with their understanding of the game and what they want from a character. (DON'T FORGET, THEY SHOULD ALWAYS BE ABLE TO CHANGE THEIR DECISION SOMEHOW)
+      *If going down the familiar "promotions" route, having multiple promotions that allow for independent character identity would be great for players to have diverse playstyles.
+* Keep track of environmental details and reward players for paying attention to them. Attention-to-detail and environmental story-telling are critical to keep players hooked
+  * Includes immersion and atmosphere
+* Perks/boosts/buffs and any increases to the player's arsenal should have significant and visible effects on gameplay (they're kicking much more ass now, or they're able to support their team much more)
+  * Can be balanced with much more dynamic and powerful enemies that need their own strategy to handle, along with older enemies to highlight the bonuses they earned that make them stronger
+* Narrative, satisfying movements, looks and sounds pretty enough etc.
+  * Narrative can be dripped through the gameplay battle scenes as well as other scenes, though exposition dumps should be tried to be kept to a minimum
+
 
 ### 2.2 Working Title
 The first and current working title is Arsenic, which is simply a word that starts with "A", the first letter of the alphabet. (like hurricanes)
 
 ### 2.3 Genre
-Defines the genre of the project.
+Tactical-RPG and small city Builder
 
 ### 2.4 Uniqueness/Innovative Design
-Describes what makes the project stand out.
+Heightened cohesion between interesting game states in the core gameplay loop while maintaining simplicity is the goal to appeal this game to as wide of an audience as possible.
+
+There's also the nature of exploration incorporated into the game, allowing players to explore the world naturally before entering combat or other interesting scenarios. This allows for advanced planning and strategy while also learning about the world around them. (Unicorn Overlord did this first, but now I'll do it in **3D**)
 
 ## 3. Product Design
-Outlines the key design elements of the project.
+
+The desired outcome from this design is to unravel the intricate history of the world as naturally to the player as possible as they overcome interesting and unique strategic decisions and challenges and come to understand and appreciate this world around them.
 
 ### 3.1 Plot and Setting
-Details the narrative and environment.
+While the plot highlights multiple countries, the physical setting of the game will highlight the central continent and its defense. The priority of how elements of the plot of the game will be delivered is in order as follows: 
+
+  1. Environmental details
+  2. Battle exposition between characters
+  3. Exposition between characters
+  4. Direct exposition
+
+"Exposition" can refer to any interaction between a character and something else that communicates information. Ideally, exposition itself follows a priority list of presenting the natural implications of the only possible thing(s) that are desired to communicate to the player, then dialogue that explicitly addresses information. I.E. show, don't tell.
 
 #### 3.1.1 Global Setting and History
-Provides context for the world and its history.
+TBD
 
 ##### 3.1.1.1 Historical Context
-Describes the major historical background.
+TBD
 
 ##### 3.1.1.2 Key Conflicts
-Summarizes pivotal global conflicts.
+TBD
 
 #### 3.1.2 Local Setting
-Focuses on specific regions within the world.
+TBD
 
 ##### 3.1.2.1 Cultural Elements
-Highlights local traditions and cultures.
+TBD
 
 ##### 3.1.2.2 Significant Locations
-Lists key landmarks and areas of interest.
+TBD
 
 ### 3.2 Gameplay Core Loops
-Breaks down primary gameplay mechanics.
+As mentioned, the core gameplay loops in the overall design is as follows:
+
+1. The battle sequence, where the player commands their squad of Zodiacs against an enemy force
+2. The city management phase, which itself has certain properties and decisions
+  1. You use this time to bond with Zodiacs or other characters and engage in quests, which can lead to interesting, maybe dangerous scenarios
+  2. You can prepare certain buildings for construction that provide unique bonuses to complement the player's grand strategy
+  3. You can command regiments of forces to attack enemy bases, fortify player bases, or scout for ambushes or other information
+  4. Purchasing and enhancement of equipment and characters
+  5. Exploration of the world around the player, including outside the colony
+  6. Hopefully much more
+
+
 
 #### 3.2.1 Tactical Battles
-Covers combat mechanics and strategy.
+Combat occurs on a square grid and initiates in the order of player's relevant initiative stat calculation (how quick and dextrous they are). 
+
+Here are the list of stats and how they generally affect combat:
+
+1. Hit Points - You know what this is
+2. Strength - Physical power and ability to wield weapons and equipment
+3. Affinity - Magic power
+4. Dexterity - Affects weapon accuracy, turn initiative
+5. Defense - Ability to withstand physical blows
+6. Willpower - Magic Resistance
+7. Speed - How quickly the user can move, amplifying ability to attack, along with their ability to evade attacks
+8. Movement - Calculated by speed and equipment, affecting unit mobility
+
+Generally the formula should work as Attacking Stat - Defending Stat = Damage, and the defending unit's HP is subtracted by this damage if it's greater than 0. If HP becomes zero, the unit dies. However, calculations can change somewhat based on equipment. The unit can also evade attacks based on their speed and the weight of their equipment avoiding damage.
+
+During a unit's turn, they can use an action to use an item in their inventory, utilize weapons to perform a physical attack, or perform an available spell. Equipment can be melee or ranged weapons, and they can respond to worn equipment and character physical of magic defense in different ways. For example, a fire arm shot at a soldier wearing heavy steel armor might not do any damage, but it can reduce their mobility. Here's the list of equipment types and how they interact
+
+Weapons:
+
+1. Swords - Medium damage, low weight
+2. Hammers - Ignores armor in damage calculation, high damage, high weight
+3. Axes - High damage, medium weight
+4. Lances - Medium damage, medium weight, only melee weapon always usable for horseback (med-high damage, low weight on horseback)
+5. Quarter Staffs - Easy to inscribe with magic, medium damage, easy to use
+6. Muskets - Can fire large damage medium range single shot. Damage is constant and not affected by stats. Adds attack weight to armored enemies that resist its damage. Needs reload every shot. Can attach sword as a bayonet, though this adds to the weapons weight and can make it more difficult to wield.
+7. Flintlock Pistols - Can fire medium damage short range single shot. Damage is constant and not affected by stats. Adds attack weight to armored enemies that resist its damage. Needs reload every shot.
+8. Bows - Fires medium damage high range attacks. Diverse, as there are many different types of bows and arrows to handle different situations.
+
+Equipment:
+
+1. Clothing - Can more easily be inscribe with magic
+2. Light Armor - Small boon to defense, difficult to inscribe with magic
+3. Medium Armor - Low penalty to speed, Medium boon to defense, difficult to inscribe with magic
+4. Heavy Armor - High penalty to speed, High boon to defense, difficult to inscribe with magic. Units wearing this armor can act as cover against ranged attacks.
+
+Offhand/side equipment:
+  1. Flintlock pistol (Same as before, but don't have to reload)
+  2. Shield - Protects against attacks, low-medium weight
+  3. Greatshield - Strongly protects against attacks, high weight
+  4. Crystals - Enhances affinities or certain stats
+
+NOTE: Weight of equipment affects accuracy, evasion, and mobility. Cannot wear weight of equipment that exceeds strength capabilities.
+
+There can also be skills characters can utilize to aid in combat, that can be attained by class/path progression, special events, etc.
 
 ##### 3.2.1.1 Battle Objectives and Progression
-Defines goals and advancement in battles.
+Goals can pertain to, but are not limited to, defeat of a commander, a whole regiment, survival for a number of turns, etc.
 
 ##### 3.2.1.2 Battle Rewards
-Details rewards for successful combat.
+Rewards for a combat scenario are relevant to the context that can be one of as follows:
+
+1. Stronghold Conquer - Acquire the resources produced by the holding that can be used for development
+2. Stronghold Defense - Thwart enemy attack and reduce their advance and aggression
+3. Quest Combat - Specific quest rewards
+4. Inner city combat - Reduces crime and increases city development and output
+
+All combats should provide the armaments and equipment of enemy forces if they aren't able to retreat. 
 
 ##### 3.2.1.3 Feeding To/From Other Loops
-Explains how combat ties into other systems.
+Relationship building can occur as a result of allies fighting together, which can advance "social links" between the player character and allies, which can then improve the player's party.
+
+Resources used for city building and control can be acquired through these missions, along with arming local militia for future scouting, offense, and defense.
 
 ##### 3.2.1.4 Systems to Enable Tactical Play
-Lists systems facilitating tactical gameplay.
+TBD.
 
 #### 3.2.2 City Management
-Describes resource and population management.
+Allows for utilization of resources to construct facilities to enhance play.
 
 ##### 3.2.2.1 Management Objectives and Progression
-Outlines goals and development in management.
+TBD.
 
 ##### 3.2.2.2 Management Rewards
-Explains benefits of effective management.
+Access to certain weapons, magic spells, etc. TBD
 
 ##### 3.2.2.3 Feeding To/From Other Loops
-Connects city management to other loops.
+TBD.
 
 ### 3.3 Visual Style
-Defines the artistic style and visual direction.
+Defines the artistic style and visual direction. **TBD**
 
 ### 3.4 Audio Style
-Describes the sound design and music style.
+Describes the sound design and music style. **TBD**
 
 ## 4. Rambling
 Below is where I ramble about the specifics of reasonings of certain design choices among other observations. While relevant to the "why" of certain decisions, it's not necessary for the direction of the project.
